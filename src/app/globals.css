@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+html.theme-dark {
+  color-scheme: dark;
+  --app-bg: #09090b;
+  --app-surface: rgba(24, 24, 27, 0.55);
+  --app-surface-solid: #18181b;
+  --app-border: #27272a;
+  --app-fg: #fafafa;
+  --app-muted: #a1a1aa;
+  --app-subtle: #71717a;
+  --app-accent: #34d399;
+  --app-accent-fg: #052e16;
+  --app-tab-active-bg: #f4f4f5;
+  --app-tab-active-fg: #18181b;
+  --cm-bg: #18181b;
+  --cm-fg: #e4e4e7;
+  --cm-gutter: #18181b;
+  --cm-gutter-fg: #52525b;
+  --cm-accent: #34d399;
+  --cm-selection: rgba(52, 211, 153, 0.25);
+  --cm-present-fg: #fafafa;
+  --read-done: #71717a;
+  --read-current: rgba(52, 211, 153, 0.22);
+  --marker-line: rgba(56, 189, 248, 0.12);
+}
+
+html.theme-light {
+  color-scheme: light;
+  --app-bg: #f4f4f5;
+  --app-surface: #ffffff;
+  --app-surface-solid: #ffffff;
+  --app-border: #e4e4e7;
+  --app-fg: #18181b;
+  --app-muted: #52525b;
+  --app-subtle: #71717a;
+  --app-accent: #059669;
+  --app-accent-fg: #ffffff;
+  --app-tab-active-bg: #18181b;
+  --app-tab-active-fg: #fafafa;
+  --cm-bg: #ffffff;
+  --cm-fg: #27272a;
+  --cm-gutter: #fafafa;
+  --cm-gutter-fg: #a1a1aa;
+  --cm-accent: #059669;
+  --cm-selection: rgba(5, 150, 105, 0.2);
+  --cm-present-fg: #18181b;
+  --read-done: #a1a1aa;
+  --read-current: rgba(5, 150, 105, 0.18);
+  --marker-line: rgba(2, 132, 199, 0.1);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--app-bg);
+  color: var(--app-fg);
+}
+
+.text-app-fg {
+  color: var(--app-fg);
+}
+.text-app-muted {
+  color: var(--app-muted);
+}
+.text-app-subtle {
+  color: var(--app-subtle);
+}
+.bg-app {
+  background: var(--app-bg);
+}
+.bg-app-surface {
+  background: var(--app-surface);
+}
+.bg-app-surface-solid {
+  background: var(--app-surface-solid);
+}
+.border-app {
+  border-color: var(--app-border);
+}
+
+.app-btn-primary {
+  border-radius: 0.5rem;
+  background: var(--app-accent);
+  color: var(--app-accent-fg);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.app-btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+.app-btn-secondary {
+  border-radius: 0.5rem;
+  border: 1px solid var(--app-border);
+  background: var(--app-surface-solid);
+  color: var(--app-fg);
+  padding: 0.5rem 0.75rem;
+}
+.app-btn-secondary:hover {
+  filter: brightness(0.98);
+}
+
+.app-panel {
+  border-radius: 0.75rem;
+  border: 1px solid var(--app-border);
+  background: var(--app-surface);
+}
+
+.present-shell .cm-editor {
+  outline: none;
+}
+
+.present-shell .cm-editor.cm-focused {
+  outline: none;
+}
+
+.cm-read-aloud-done {
+  color: var(--read-done);
+  text-decoration: line-through;
+  text-decoration-color: color-mix(in srgb, var(--read-done) 65%, transparent);
+}
+
+.cm-read-aloud-current {
+  background-color: var(--read-current);
+  border-radius: 4px;
+}
+
+.cm-minute-marker-line {
+  background-color: var(--marker-line);
+}
